@@ -1,0 +1,57 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:form="sap.ui.layout.form" xmlns:layout="sap.ui.layout" xmlns:sap.ca.ui="sap.ca.ui" xmlns:suite="sap.suite.ui.commons">
+	<!-- The following controls were copied from the parent view -->
+	<layout:VerticalLayout xmlns:layout="sap.ui.layout" id="infoTabContent" width="100%" class="crossFndFioriInboxDescription">
+		<layout:content>
+			<core:HTML xmlns:core="sap.ui.core" content="{path: 'detail>/Description', formatter: 'cross.fnd.fiori.inbox.Conversions.formatterHtml'}" sanitizeContent="true"/>
+		</layout:content>
+		<!-- Form for custom attributes -->
+		<form:Form xmlns:form="sap.ui.layout.form" width="100%">
+			<form:formContainers>
+				<form:FormContainer id="customAttributesContainer"/>
+			</form:formContainers>
+			<form:layout>
+				<form:ResponsiveLayout/>
+			</form:layout>
+		</form:Form>
+	</layout:VerticalLayout>
+	<Label text="Редактируем контейнер потока:" width="100%" id="TestLabel" design="Bold"/>
+	<Panel id="__panel0">
+		<content>
+			<layout:Grid id="__grid2">
+				<layout:content>
+					<layout:VerticalLayout width="100%" id="__layout6">
+						<Label id="LR_WI_IDn" text="Workitem_id"/>
+						<Input id="WI_ID" value="0000000000" editable="false"/>
+					</layout:VerticalLayout>					
+					<layout:VerticalLayout width="100%" id="__layout1">
+						<layout:content>
+							<Label text="Дата с" width="100%" id="LR_DateFrom"/>
+							<DateTimeInput id="DateFrom" change="onDateChange" type="Date" valueFormat="dd/MM/yyyy"/>
+						</layout:content>
+					</layout:VerticalLayout>
+					<layout:VerticalLayout width="100%" id="__layout2">
+						<Label id="LR_DateTo" text="Дата по"/>
+						<DateTimeInput id="DateTo" change="onDateChange" type="Date" valueFormat="dd/MM/yyyy"/>
+					</layout:VerticalLayout>
+				</layout:content>
+			</layout:Grid>
+			<layout:Grid id="__grid3">
+				<layout:content>
+					<layout:VerticalLayout width="100%" id="__layout3">
+						<Label id="LR_Position" text="Должность"/>
+						<Input id="Position" value=""/>
+					</layout:VerticalLayout>
+					<layout:VerticalLayout width="100%" id="__layout4">
+						<Label id="LR_Debt" text="Подразделение"/>
+						<Input id="Dept" value=""/>
+					</layout:VerticalLayout>
+					<layout:VerticalLayout width="100%" id="__layout5">
+						<Label id="LR_Salary" text="ЗП до налогооблажения"/>
+						<Input id="Salary" value=""/>
+					</layout:VerticalLayout>
+				</layout:content>
+			</layout:Grid>
+			<Button text="Получить" width="100px" id="GetBtn" press="OnGetBtnPress"/>
+		</content>
+	</Panel>
+</core:FragmentDefinition>
