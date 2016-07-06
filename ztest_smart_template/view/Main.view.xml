@@ -1,0 +1,42 @@
+<sap.ui.core:View xmlns="sap.m" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.layout="sap.ui.layout" xmlns:sap.me="sap.me" xmlns:sap.ui.core="sap.ui.core" xmlns:ui="sap.ca.ui" xmlns:sap.ui.unified="sap.ui.unified" id="Main" controllerName="ztest_smart_template.view.Main">
+	<Panel id="__panel0">
+		<content>
+			<Select selectedItem="null" id="ProcSelect"/>
+			<Button text="TestLink" width="100px" id="GotoLink" press="OnLinkPress"/>
+			<Button text="Google" width="100px" id="CallGoogle" press="OnGooglePress"/>
+			<Button text="Запустить" width="100px" id="AddLine" press="OnAddLinePress"/>
+		</content>
+	</Panel>
+	<Panel id="__panel1">
+		<content>
+			<sap.ui.layout:Grid width="30%" defaultSpan="L6 M6 S6">
+				<sap.ui.layout:content>
+					<sap.ui.layout:VerticalLayout width="100%">
+						<Label id="LR_DateFrom" text="Дата с"/>
+						<DateTimeInput id="DateFrom" change="onDateChange" type="Date" valueFormat="dd/MM/yyyy"/>
+					</sap.ui.layout:VerticalLayout>
+					<sap.ui.layout:VerticalLayout width="100%">
+						<Label id="LR_DateTo" text="Дата по"/>
+						<DateTimeInput id="DateTo" change="onDateChange" type="Date" valueFormat="dd/MM/yyyy"/>
+					</sap.ui.layout:VerticalLayout>
+				</sap.ui.layout:content>
+			</sap.ui.layout:Grid>
+			<sap.ui.layout:Grid width="40%" defaultSpan="L6 M6 S6">
+				<sap.ui.layout:content>
+					<sap.ui.layout:VerticalLayout width="100%">
+						<Label id="LR_Position" text="Должность"/>
+						<Input id="Position" value="Тест_Должность"/>
+					</sap.ui.layout:VerticalLayout>
+					<sap.ui.layout:VerticalLayout width="100%">
+						<Label id="LR_Debt" text="Подразделение"/>
+						<Input id="Dept" value="Тест_Подразделение"/>
+					</sap.ui.layout:VerticalLayout>
+					<sap.ui.layout:VerticalLayout width="100%">
+						<Label id="LR_Salary" text="ЗП до налогооблажения"/>
+						<Input id="Salary" value="10000"/>
+					</sap.ui.layout:VerticalLayout>
+				</sap.ui.layout:content>
+			</sap.ui.layout:Grid>
+		</content>
+	</Panel>
+</sap.ui.core:View>
